@@ -211,6 +211,7 @@ body {
     position: relative;
     width: 90%;
     padding: 20px;
+    margin: 0 25px;
     margin-top: 10px;
     min-height: calc(80vh);
     background: var(--white);
