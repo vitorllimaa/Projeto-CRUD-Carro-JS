@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de Carros</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -62,7 +62,7 @@
         <div class="details">
             <section class="cardHeader">
                 <h2>Pedidos Recentes</h2>
-                <a href="#" class="btn">Ver Todos</a>
+                <a href="#" class="btn">Cadastrar</a>
             </section>
             <table>
                 <thead>
@@ -81,7 +81,7 @@
                         <td>VITOR LIMA</td>
                         <td>R$ 12205,00</td>
                         <td>5</td>
-                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td data-js="icon-edit"><ion-icon name="create-outline"></ion-icon></td>
                         <td><ion-icon name="trash-outline"></ion-icon></td>
                     </tr>
                     <tr>
@@ -89,7 +89,7 @@
                         <td>LUCAS LIMA</td>
                         <td>R$ 12205,00</td>
                         <td>5</td>
-                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td data-js="icon-edit"><ion-icon name="create-outline"></ion-icon></td>
                         <td><ion-icon name="trash-outline"></ion-icon></td>
                     </tr>
                     <tr>
@@ -102,6 +102,29 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="pop-up">
+                <section class="edit-cotainer">
+                    <div class="edit-cotainer_form">
+                        <div class="edit-coitainer_header">
+                            <h2>Editar Cadastro</h2>
+                            <ion-icon name="close-outline"></ion-icon> 
+                        </div>            
+                        <form action="">
+                            <label for="name"> Nome</label>
+                                <input type="text" name="name" id="name">
+                            <label for="price"> Preço</label>
+                                <input type="text" name="price" id="price">
+                            <label for="qtd"> Quantidade</label>
+                                <input type="text" name="qtd" id="qtd">
+                            <label for="Register"> Register</label>
+                                <input type="text" name="Register" id="Register">    
+                            <button type="submit">Editar</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+        
         </div>
     </main>
 

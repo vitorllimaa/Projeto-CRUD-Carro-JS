@@ -8,7 +8,8 @@
 :root {
     /* color palette */
     
-    --blue: #287bff;
+    /* --blue: #287bff; */
+    --blue: #194B32;
     --white: #fff;
     --grey: #f5f5f5;
     --black1: #222;
@@ -280,6 +281,113 @@ body {
 
 .details table tr td:nth-child(4) {
     text-align: center;
+}
+
+.details table tr ion-icon {
+    cursor: pointer;
+}
+
+.details table tr td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.details table tr td:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+/* pop-up Edit and register */ 
+
+.edit-cotainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.30);
+    transition: opacity 0.7s ease-in-out;
+
+}
+
+.edit-cotainer.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.edit-cotainer_form {
+    background: var(--white);
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.edit-coitainer_header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.edit-coitainer_header ion-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5em;
+    color: var(--blue);
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.edit-coitainer_header ion-icon:hover {
+    color: var(--black1);
+
+}    
+
+.edit-cotainer_form h2 {
+    color: var(--blue);
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.edit-cotainer form label {
+    font-weight: 600;
+}
+
+.edit-cotainer form input {
+    width: 100%;
+    height: 30px;
+    border-radius: 40px;
+    font-size: 15px;
+    outline: none;
+    padding: 5px 20px;
+    border: 1px solid var(--black2);
+}
+
+.edit-cotainer form label, 
+.edit-cotainer form input{
+    display: block;
+    margin-bottom: 9px;
+
+}
+
+.edit-cotainer form button {
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
 }
 
 
