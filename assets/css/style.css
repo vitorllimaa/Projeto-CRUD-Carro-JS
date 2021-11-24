@@ -14,6 +14,7 @@
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
+    --transp: #000000a1;
 
     /* default value */
 
@@ -160,6 +161,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--black2);
 }
 
 .toggle {
@@ -172,6 +174,11 @@ body {
     align-items: center;
     font-size: 2.5em;
     cursor: pointer;
+}
+
+.search > label,
+.toggle > ion-icon {
+    color: var(--blue);
 }
 
 .search {
@@ -193,7 +200,7 @@ body {
     padding-left: 30px;
     font-size: 15px;
     outline: none;
-    border: 1px solid var(--black2);
+    border: 1px solid var(--blue);
 
 }
 
@@ -207,16 +214,27 @@ body {
 
 /* table */
 
+.details-for {
+    background: url(https://doubleapex.co.za/wp-content/uploads/VW-T-Cross-1.jpg);
+    background-position: center;
+    padding: 2% 0;
+    height: calc(100vh - 60px);
+    background-size: cover;
+}
+
 .details {
     position: relative;
     width: 90%;
-    padding: 20px;
-    margin: 0 25px;
-    margin-top: 10px;
     min-height: calc(80vh);
-    background: var(--white);
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    max-height: 50vh;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 5%;
+    background: var(--transp);
+    box-shadow: 0 7px 25px rgb(0 0 0 / 8%);
     border-radius: 20px;
+    overflow-y: auto;
+
 }
 
 .cardHeader {
@@ -229,7 +247,7 @@ body {
 
 .cardHeader h2 {
     font-weight: 600;
-    color: var(--blue);
+    color: var(--white);
     font-size: 25px;
 }
 
@@ -250,11 +268,12 @@ body {
 
 
 .details table thead td {
+    color: var(--white);
     font-weight: 450;
 }
 
 .details table tbody tr {
-    color: var(--black2);
+    color: var(--white);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -277,11 +296,11 @@ body {
 }
 
 .details table tr td:nth-child(3) {
-    text-align: end;
+    text-align: center;
 }
 
 .details table tr td:nth-child(4) {
-    text-align: center;
+    text-align: end;
 }
 
 .details table tr ion-icon {
@@ -298,7 +317,7 @@ body {
 
 /* pop-up Edit and register */ 
 
-.edit-cotainer {
+.popup-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -314,12 +333,12 @@ body {
 
 }
 
-.edit-cotainer.show {
+.popup-container.show {
     pointer-events: auto;
     opacity: 1;
 }
 
-.edit-cotainer_form {
+.popup-container-form {
     background: var(--white);
     width: 600px;
     height: 400px;
@@ -330,13 +349,13 @@ body {
     border-radius: 10px;
 }
 
-.edit-coitainer_header {
+.popup-container-header {
     position: relative;
     width: 100%;
     text-align: center;
 }
 
-.edit-coitainer_header ion-icon {
+.popup-container-header ion-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -346,23 +365,23 @@ body {
     cursor: pointer;
 }
 
-.edit-coitainer_header ion-icon:hover {
+.popup-container-header ion-icon:hover {
     color: var(--black1);
 
 }    
 
-.edit-cotainer_form h2 {
+.popup-container-form h2 {
     color: var(--blue);
     font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-.edit-cotainer form label {
+.popup-container form label {
     font-weight: 600;
 }
 
-.edit-cotainer form input {
+.popup-container form input {
     width: 100%;
     height: 30px;
     border-radius: 40px;
@@ -372,14 +391,14 @@ body {
     border: 1px solid var(--black2);
 }
 
-.edit-cotainer form label, 
-.edit-cotainer form input{
+.popup-container form label, 
+.popup-container form input{
     display: block;
     margin-bottom: 9px;
 
 }
 
-.edit-cotainer form button {
+.popup-container form button {
     margin-top: 10px;
     width: 100%;
     height: 30px;
@@ -449,3 +468,17 @@ body {
 }    
     
 } 
+
+*::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 5px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 5px;
+  }
