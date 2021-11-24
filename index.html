@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Carros</title>
+    <title>Lista de Carros</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
     <header class="container">
-        <nav class="navigation">
+        <nav class="navigation" data-js="navigation">
             <ul>
-                <li>
-                    <a href="#">
+                <li data-js="list-nav">
+                    <a href="/">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                             <span class="title">Início</span>
                     </a>
                 </li>
-                <li>
+                <li data-js="list-nav">
+                    <a href="/">
+                        <span class="icon"><ion-icon name="car-sport-outline"></ion-icon></span>
+                        <span class="title">Carros</span>
+                    </a>
+                </li>
+                <li data-js="list-nav">
                     <a href="#">
                         <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
-                            <span class="title">Contatos</span>
+                            <span class="title">Contato</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="cog-outline"></ion-icon></span>
-                            <span class="title">Configuração</span>
-                    </a>
-                </li>
-                <li>
+                <li data-js="list-nav">
                     <a href="#">
                         <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
                             <span class="title">Ajuda</span>
                     </a>
                 </li>
-                <li>
+                <li data-js="list-nav">
                     <a href="#">
                         <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
                             <span class="title">Sair</span>
@@ -47,9 +47,9 @@
         </nav>
     </header>
     <!-- main -->
-    <main class="main">
+    <main class="main" data-js="main">
         <div class="topbar">
-            <section class="toggle">
+            <section class="toggle" data-js="toggle">
                 <ion-icon name="menu-outline"></ion-icon>
             </section>
             <section class="search">
@@ -59,65 +59,142 @@
                 </label>
             </section>
         </div>
-        <div class="details">
+        <div class="details-for">
+            <div class="details">
             <section class="cardHeader">
                 <h2>Pedidos Recentes</h2>
-                <a href="#" class="btn">Cadastrar</a>
+                <a href="#" class="btn" data-js="btn-register">Cadastrar</a>
             </section>
             <table>
                 <thead>
                     <tr>
                         <td>#</td>
-                        <td>Nome</td>
+                        <td>Marca</td>
+                        <td>Modelo</td>
                         <td>Preço</td>
-                        <td>Qtd</td>
-                        <td>Editar</td>
-                        <td>Deletar</td>
+                        <td>Ano</td>
+                        <td>EDITAR</td>
+                        <td>DELETAR</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>VITOR LIMA</td>
-                        <td>R$ 12205,00</td>
-                        <td>5</td>
-                        <td data-js="icon-edit"><ion-icon name="create-outline"></ion-icon></td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
                         <td><ion-icon name="trash-outline"></ion-icon></td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>LUCAS LIMA</td>
-                        <td>R$ 12205,00</td>
-                        <td>5</td>
-                        <td data-js="icon-edit"><ion-icon name="create-outline"></ion-icon></td>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
                         <td><ion-icon name="trash-outline"></ion-icon></td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>PEDRO LIMA</td>
-                        <td>R$ 12205,00</td>
-                        <td>5</td>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
+                        <td><ion-icon name="create-outline"></ion-icon></td>
+                        <td><ion-icon name="trash-outline"></ion-icon></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Chevrolet</td>
+                        <td>Celta 1.0 16V</td>
+                        <td>R$ 10.000,00</td>
+                        <td>2012</td>
                         <td><ion-icon name="create-outline"></ion-icon></td>
                         <td><ion-icon name="trash-outline"></ion-icon></td>
                     </tr>
                 </tbody>
             </table>
-            <div class="pop-up">
-                <section class="edit-cotainer">
-                    <div class="edit-cotainer_form">
-                        <div class="edit-coitainer_header">
+            <div class="popup">
+                <section class="popup-container" data-js="popup-container">
+                    <div class="popup-container-form">
+                        <div class="popup-container-header">
                             <h2>Editar Cadastro</h2>
-                            <ion-icon name="close-outline"></ion-icon> 
+                            <ion-icon data-js="popup-icon" name="close-outline"></ion-icon> 
                         </div>            
                         <form action="">
-                            <label for="name"> Nome</label>
-                                <input type="text" name="name" id="name">
+                            <label for="brand"> Marca</label>
+                                <input type="text" name="brand" id="brand">
+                            <label for="model"> Modelo</label>
+                                <input type="text" name="model" id="model"> 
                             <label for="price"> Preço</label>
                                 <input type="text" name="price" id="price">
-                            <label for="qtd"> Quantidade</label>
-                                <input type="text" name="qtd" id="qtd">
-                            <label for="Register"> Register</label>
-                                <input type="text" name="Register" id="Register">    
+                            <label for="qtd"> Ano</label>
+                                <input type="text" name="qtd" id="qtd">   
                             <button type="submit">Editar</button>
                         </form>
                     </div>
@@ -126,6 +203,8 @@
 
         
         </div>
+        </div>
+        
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
