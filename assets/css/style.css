@@ -215,7 +215,7 @@ body {
 /* table */
 
 .details-for {
-    background: url(https://doubleapex.co.za/wp-content/uploads/VW-T-Cross-1.jpg);
+    background: url('../img/Image_Car.jpg');
     background-position: center;
     padding: 2% 0;
     height: calc(100vh - 60px);
@@ -274,7 +274,7 @@ body {
 
 .details table tbody tr {
     color: var(--white);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgb(147 147 147 / 34%);;
 }
 
 .details table tr:last-child {
@@ -304,6 +304,7 @@ body {
 }
 
 .details table tr ion-icon {
+    font-size: 1.2em;
     cursor: pointer;
 }
 
@@ -336,6 +337,11 @@ body {
 .popup-container.show {
     pointer-events: auto;
     opacity: 1;
+}
+
+
+.popup-container.shows {
+    display: none;
 }
 
 .popup-container-form {
