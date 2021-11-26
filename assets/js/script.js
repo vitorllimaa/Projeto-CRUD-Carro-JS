@@ -160,7 +160,6 @@ function create() {
         e.preventDefault();
         
         let listCar = localStorage.listCar ? JSON.parse(localStorage.getItem('listCar')) : [];
-        /* let id = localStorage.listCar ? JSON.parse(localStorage.listCar).length + 1 : 1; */
 
         if(localStorage.listCar.length > 0 && JSON.parse(localStorage.listCar).length > 0) {
             let idArray = []
@@ -234,9 +233,9 @@ function deleteCar(idCard) {
         const result = json.filter(e => e.id != idCard);
         localStorage.setItem('listCar', JSON.stringify(result));
         read();
+        alertText('Cadastro deletado com sucesso');
     }
 
-    alertText('Cadastro deletado com sucesso');
     
 }
 
